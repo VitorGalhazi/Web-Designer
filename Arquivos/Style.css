@@ -73,13 +73,13 @@ li.dropdown {
 body {font-family: Verdana,sans-serif;}
 
 .mySlides {display:none}
-/* Slideshow container */
+
 .slideshow-container {
   max-width: 1200px;
   position: relative;
   margin: auto;
 }
-/* Legenda */
+
 .text {
   color: rgba(200, 80, 80, 1);
   font-size: 20px;
@@ -97,7 +97,7 @@ body {font-family: Verdana,sans-serif;}
   position: absolute;
   top: 0;
 }
-/* Pontos indicadores */
+
 .dot {
   height: 13px;
   width: 13px;
@@ -110,7 +110,7 @@ body {font-family: Verdana,sans-serif;}
 .active {
   background-color: #717171;
 }
-/* Animação Fade */
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 2.5s;
@@ -122,7 +122,6 @@ body {font-family: Verdana,sans-serif;}
   from {opacity: .4}
   to {opacity: 1}
 }
-/* Em telas menores, para diminuir o tamanho do texto */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
@@ -184,7 +183,6 @@ footer img{
 .face{
   width: 200px
 }
-/* rodapé */
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -236,5 +234,5 @@ footer img{
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
   .col-13 {width: 22%}
-}
+}}
 
