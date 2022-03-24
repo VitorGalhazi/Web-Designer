@@ -98,6 +98,7 @@ body {font-family: Verdana,sans-serif;}
   top: 0;
 }
 
+
 .dot {
   height: 13px;
   width: 13px;
@@ -117,6 +118,7 @@ body {font-family: Verdana,sans-serif;}
   animation-name: fade;
   animation-duration: 2.5s;
 }
+
 @-webkit-keyframes fade {
   from {opacity: .4}   to {opacity: 1} } @keyframes fade {
   from {opacity: .4}
@@ -132,6 +134,19 @@ img{
     margin-right: auto;
     display: block;
 }
+.center{
+  position: relative;
+  margin-left: 48%;
+  margin-right: 50%;
+  }
+  .space{
+    width: 10%;
+  }
+  .conteudo{
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid black;
+  }
 body{
     background-image: url(campo.jpg);
     background-repeat: no-repeat;
@@ -234,5 +249,5 @@ footer img{
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
   .col-13 {width: 22%}
-}}
+}
 
