@@ -27,27 +27,27 @@
                 <div class="slideshow-container ">
                     <div class="seta">
                       <div class="mySlides fade">
-                        <img src="Sao.png">
+                        <img src="img/Sao.png">
                           <br><br>
                         <div class="text">São Paulo FC</div>
                       </div>
                       <div class="mySlides fade">
-                        <img src="Santos.png">
+                        <img src="img/Santos.png">
                         <br><br>
                         <div class="text">Santos FC</div>
                       </div>
                       <div class="mySlides fade">
-                        <img src="Palmeiras.png">
+                        <img src="img/Palmeiras.png">
                         <br><br>
                         <div class="text">EC Palmeiras</div>
                       </div>
                       <div class="mySlides fade">
-                          <img src="Cor.png">
+                          <img src="img/Cor.png">
                           <br><br>
                           <div class="text">SC Corinthians</div>
                         </div>
                         <div class="mySlides fade">
-                          <img src="RedBullBragantino.png">
+                          <img src="img/RedBullBragantino.png">
                           <br><br>
                           <div class="text">Red Bull Bragantino</div>
                         </div>
@@ -71,13 +71,13 @@
                 <p class="conteudo">Bem-vindo ao site oficial da Federação Paulista de Futebol. Aqui você encontrará os principais conteúdos sobre o seu time do coração, seja torcedor tricolor, porco, timão, peixe ou do Bragantino. Imagens, conteúdos e muito mais. Siga-nos para acompanhar.</p>
                 <div class='all'>
                         <section class='galeria'>
-                        <img src='Est%C3%A1dio_Morumbi.jpg'class='box col-s-7 col-3' alt='estadio' onclick='mostrarImagem(this)'>
+                        <img src='img/Est%C3%A1dio_Morumbi.jpg'class='box col-s-7 col-3' alt='estadio' onclick='mostrarImagem(this)'>
                         
-                        <img src='Derbi.jpg' alt='derbi' class='box col-s-7 col-3' onclick='mostrarImagem(this)'>
+                        <img src='img/Derbi.jpg' alt='derbi' class='box col-s-7 col-3' onclick='mostrarImagem(this)'>
      
-                        <img src='sansao.jpg' alt='SanSão' class='box col-s-7 col-3' onclick='mostrarImagem(this)'>
+                        <img src='img/sansao.jpg' alt='SanSão' class='box col-s-7 col-3' onclick='mostrarImagem(this)'>
 
-                        <img src='bragantino.jpg' alt='Bragantino' class='box col-s-6 col-13' onclick='mostrarImagem(this)'>
+                        <img src='img/bragantino.jpg' alt='Bragantino' class='box col-s-6 col-13' onclick='mostrarImagem(this)'>
 
                         <p class="infor col-s-7 col-3">
                           O Estádio Cícero Pompeu de Toledo, mais conhecido como Estádio do Morumbi, é um estádio construído para receber partidas de futebol, sendo a sede oficial do time brasileiro de futebol São Paulo Futebol Clube, já tendo recebido a Seleção Brasileira em várias ocasiões. O estádio foi projetado para acomodar 150 mil espectadores, mas, devido a diversas reformas e à instalação de camarotes, sua capacidade foi reduzida para 72 039. O Morumbi é o terceiro maior estádio do Brasil, sendo também o maior estádio do estado de São Paulo e o maior estádio particular do País. Localiza-se na Praça Roberto Gomes Pedrosa, n.º 1, em São Paulo. Projetado pelo arquiteto João Batista Vilanova Artigas, é considerado um patrimônio arquitetônico representativo da Escola Paulista, tendo sido tombado em 2018 pelo Conselho Municipal de Preservação do Patrimônio Histórico, Cultural e Ambiental da Cidade de São Paulo (Conpresp).
@@ -88,7 +88,7 @@
                         <p class="infor col-s-7 col-3">
                           San-São é, no futebol paulista, o confronto entre Santos Futebol Clube e São Paulo Futebol Clube. Este apelido foi dado pelo jornalista Tomás Mazzoni, do jornal A Gazeta Esportiva, em 1956. O clássico tem fama de costumeiramente ter como vencedor o que vive pior momento, embora quando se enfrentaram na disputa de títulos o time com as melhores condições sempre tenha vencido. O San-São é um confronto de muita rivalidade e é tratado como um clássico tradicional dentro do estado de São Paulo. Santos e São Paulo já decidiram, por exemplo, finais do Campeonato Paulista, além de terem se enfrentado em fases eliminatórias de importantes competições nacionais e internacionais, como o Campeonato Brasileiro, a Copa do Brasil e a Supercopa Libertadores. 
                         </p>
-                        <p class="infor col-s-14 col-14">
+                        <p class="infor col-s-7 col-14">
                           Red Bull Bragantino, também conhecido como RB Bragantino ou Bragantino, é um clube esportivo brasileiro da cidade de Bragança Paulista, interior do estado de São Paulo. É controlado pela multinacional de bebidas energéticas Red Bull.O clube foi fundado cujo nome de Clube Atlético Bragantino em 8 de janeiro de 1928, e suas cores de origem eram preto e branco. Entretanto, a partir da parceria com a empresa Red Bull GmbH em 2019, passou a aderir as cores vermelho junto ao seu tradicional alvinegro. O time teve um ápice no começo dos anos 1990, quando foi Campeão Paulista de 1990 e chegou à final do Campeonato Brasileiro de 1991, sendo um clube profissional oriundo de uma cidade com apenas 150 mil habitantes. Em 2019, associou-se à multinacional sediada na Áustria Red Bull, mudando sua identidade para Red Bull Bragantino no ano seguinte.
                         </p>
 
@@ -101,63 +101,16 @@
                 
                 </div>     
             </main>
-        <script>
-            var slideIndex = 0;
-            function goto(indice){
-                slideIndex = indice;
-            }
-            showSlides();
-            function showSlides() {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none"; 
-              }
-              slideIndex++;
-              if (slideIndex > slides.length) {slideIndex = 1}
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
-              setTimeout(showSlides, 3000); 
-            }
-            
-            var slideIndex = 1;
-            showDivs(slideIndex);
-
-            function plusDivs(n) {
-            showDivs(slideIndex += n);
-            }
-
-            function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length} ;
-            for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
-            }
-            
-            function mostrarImagem(img){
-            const imagemGrande=document.getElementById("imagemGrande");
-            imagemGrande.src=img.src;
-            imagemGrande.parentElement.style.display='block';
-                
-            }            
-          </script>
+        <script src="script.js"></script>
     </body>
-    <br>
+    <br> 
     <br>
     <footer>
         Siga-nos nas nossas redes sociais:
         <div class='grid-container'>
-            <img src=Twitter.png class="gridd-item" alt='Twitter logo'>
-            <img src=Facebook.png class="gridd-item face" alt='Facebook logo'>
-            <img src=Instagram.png class="gridd-item" alt='Instagram logo'>
+            <img src=img/Twitter.png class="gridd-item" alt='Twitter logo'>
+            <img src=img/Facebook.png class="gridd-item face" alt='Facebook logo'>
+            <img src=img/Instagram.png class="gridd-item" alt='Instagram logo'>
         </div>
         <br>
         &#10132; <a href="https://www.instagram.com/fpf_oficial/">Instagram</a>

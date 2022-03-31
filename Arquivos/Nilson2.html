@@ -2,6 +2,7 @@
 <html lang="pt-br">
     <head>
       <link rel="stylesheet" href="Nilson2.css">
+      <link rel="stylesheet" href="Style.css">
       <title>Federação Paulista</title>
       <link rel="icon" href="fpf.ico" type="Image/x-icon"?v=2/>
       <meta charset="UTF-8">
@@ -25,22 +26,22 @@
                 <h3 id='text' style="color: red; text-align: center">Conheça nossos principais jogadores</h3>
                 <div class="slideshow-container ">
                       <div class="mySlides fade">
-                      <img src="calleri.jpg">
+                      <img src="img/calleri.jpg">
                         <br><br>
                       <div class="text">Calleri-São Paulo FC</div>
                     </div>
                     <div class="mySlides fade">
-                      <img src="goulart.jpeg">
+                      <img src="img/goulart.jpeg">
                       <br><br>
                       <div class="text">Ricardo Goulart-Santos FC</div>
                     </div>
                     <div class="mySlides fade">
-                      <img src="weverton.jpg">
+                      <img src="img/weverton.jpg">
                       <br><br>
                       <div class="text">Weverton-EC Palmeiras</div>
                     </div>
                     <div class="mySlides fade">
-                        <img src="renato.jpeg">
+                        <img src="img/renato.jpeg">
                         <br><br>
                         <div class="text">Renato Augusto-SC Corinthians</div>
                       </div>
@@ -64,45 +65,16 @@
                 <br>
                 <br> 
             </main>
-        <script>
-            var slideIndex = 0;
-            function goto(indice){
-                slideIndex = indice;
-            }
-            showSlides();
-            function showSlides() {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none"; 
-              }
-              slideIndex++;
-              if (slideIndex > slides.length) {slideIndex = 1}
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
-              setTimeout(showSlides, 3000); 
-            }
-            
-            function mostrarImagem(img){
-            const imagemGrande=document.getElementById("imagemGrande");
-            imagemGrande.src=img.src;
-            imagemGrande.parentElement.style.display='block';
-                
-            }            
-          </script>
+        <script src="script.js"></script>
     </body>
     <br>
     <br>
     <footer>
         Siga-nos nas nossas redes sociais:
         <div class='grid-container'>
-            <img src=Twitter.png class="gridd-item" alt='Twitter logo'>
-            <img src=Facebook.png class="gridd-item face" alt='Facebook logo'>
-            <img src=Instagram.png class="gridd-item" alt='Instagram logo'>
+            <img src=img/Twitter.png class="gridd-item" alt='Twitter logo'>
+            <img src=img/Facebook.png class="gridd-item face" alt='Facebook logo'>
+            <img src=img/Instagram.png class="gridd-item" alt='Instagram logo'>
         </div>
         <br>
         &#10132; <a href="https://www.instagram.com/fpf_oficial/">Instagram</a>

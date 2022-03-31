@@ -148,11 +148,15 @@ img{
     border: 1px solid black;
   }
 body{
-    background-image: url(campo.jpg);
+    background-image: url(img/campo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
     font-family: fantasy;
+}
+
+.textos{
+  color:rgba(255, 255, 255, 0.8);
 }
 
 .galeria{
