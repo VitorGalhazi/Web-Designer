@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta  charset="utf-8">
+        <style>
+        Body {
+        font-family: cursive, sans-serif;
+        width: auto;
+        height: auto;
+        background-color: coral;
+        padding: 25px;
+        font-size: 20px;
+    }    
+    
+    p { 
+        color: blue;
+    }
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    
+        </style>
+    </head>
+    <body>
+        <h1>Cadastro de Usuário</h1>
+        <form action="" method="post" onsubmit="return checkBox(this)">
+            <label>Nome:</label>
+            <input type="text" required min=3 name="nome" >
+            <br>
+            <label>Usuário</label>
+            <input type="text" required name="user" >
+            <br>
+            <label>Senha</label>
+            <input type="password" required name="senha" id="senha">
+            <br>
+            <label>Connfirmação de senha</label>
+            <input type="password" required name="senha1" id="senha1">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    <script>
+        function checkBox(form){
+           var senha = document.getElementById(senha);
+           var senha1 = document.getElementById(senha1);
+
+           if(senha!=senha1){
+               alert("Verifique os dados e tente novamente")
+               return(false)
+           }else{
+               return(true)
+           }
+        }
+
+    </script>
+</html>
