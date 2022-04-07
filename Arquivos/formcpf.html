@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta  charset="utf-8">
+        <style>
+        Body {
+        font-family: cursive, sans-serif;
+        width: auto;
+        height: auto;
+        background-color: coral;
+        padding: 25px;
+        font-size: 20px;
+    }    
+    
+    p { 
+        color: blue;
+    }
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    
+        </style>
+    </head>
+    <body>
+        <h1>Cadastro de Usuário</h1>
+        <form action="" method="post" onsubmit="return checkBox(this)">
+            <label>Nome:</label>
+            <input type="text" required min=3 name="nome" pattern="([A-ZÁ-Ú]{1})([a-z]{2,})">
+            <br>
+            <label>Usuário: </label>
+            <input type="text" required name="user" pattern="^[a-zA-Z0-9_]*$" >
+            <br>
+            <label>CPF: </label>
+            <input type="text" required name="cpf" id="cpf">
+            <br>
+            <label>Senha: </label>
+            <input type="password" required min=3 name="senha" id="senha">
+            <br>
+            <label>Confirmação de senha: </label>
+            <input type="password" required name="senha1" id="se">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    <script>
+        
+        function checkBox(form){
+           var senha = document.getElementById("senha").value;
+           var senha1 = document.getElementById("se").value;
+           var verifica 
+           if(senha!=senha1){
+               alert("As senhas não conferem!")
+               var verifica = false
+           }else{
+               alert("As senhas conferem!")
+               var verifica = true
+           }
+           
+        var Soma;
+        var Resto;
+        Soma = 0;
+        var verifica1
+        var strCPF = document.getElementById("cpf").value;
+        if (strCPF == "00000000000"){
+            alert("CPF inválido");
+             return false
+        } 
+
+        for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+        Resto = (Soma * 10) % 11;
+
+        if ((Resto == 10) || (Resto == 11)){
+            Resto = 0;
+        }
+        if (Resto != parseInt(strCPF.substring(9, 10))){
+            alert("CPF inválido")
+            return false
+        }
+
+        Soma = 0;
+        for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+        Resto = (Soma * 10) % 11;
+
+        if ((Resto == 10) || (Resto == 11)){
+            Resto = 0;
+        }
+        if (Resto != parseInt(strCPF.substring(10, 11))){
+            alert("CPF inválido")
+            return false;
+        } 
+        
+        if(verifica == true){
+            return true
+        }
+        
+    }
+           
+
+    </script>
+</html>
