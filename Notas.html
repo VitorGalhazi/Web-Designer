@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta  charset="utf-8">
+        <style>
+        Body {
+        font-family: cursive, sans-serif;
+        width: auto;
+        height: auto;
+        background-color: coral;
+        padding: 25px;
+        font-size: 20px;
+    }    
+    
+    p { 
+        color: blue;
+    }
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    
+        </style>
+    </head>
+    <body>
+        <h1>Cadastro de Usuário</h1>
+        <form action="" method="post" onsubmit="checkBox(this)">
+            <label>Nome:</label>
+            <input type="text" required min=3 name="nome" pattern="([A-ZÁ-Ú]{1})([a-z]{2,})">
+            <br>
+            <label>Número: </label>
+            <input type="number" required max="30" name="number">
+            <br>
+            <label>Cursos: </label>
+            <select name="cursos">
+            <option value="PUB">Publicidade e Propaganda</option>
+            <option value="LOG">Logística</option>
+            <option value="COB">Contabilidade</option>
+            <option value="TID">Informática</option>
+            <option value="ADM">Administração</option>
+            </select>
+            <label>Turma</label>
+            <select name="turma">
+                <option value="1TID">1ºTNTID</option>
+                <option value="2TID">2ºTNTID</option>
+                <option value="3TID">3ºTNTID</option>
+                <option value="1TID">1ºTNLOG</option>
+                <option value="2TID">2ºTNLOG</option>
+                <option value="3TID">3ºTNLOG</option>
+                <option value="1TID">1ºTNCOB</option>
+                <option value="2TID">2ºTNCOB</option>
+                <option value="3TID">3ºTNCOB</option>
+                <option value="1TID">1ºTNPUB</option>
+                <option value="2TID">2ºTNPUB</option>
+                <option value="3TID">3ºTNPUB</option>
+                <option value="1TID">1ºTNADM</option>
+                <option value="2TID">2ºTNADM</option>
+                <option value="3TID">3ºTNADM</option>
+            </select>
+            <br>
+            <label>Módulo: </label>
+            <select name="modulo">
+            <option value="modulo">1ºmódulo</option>
+            <option value="modulo">2ºmódulo</option>
+            <option value="modulo">3ºmódulo</option>
+            </select>
+            <br>
+            <label>Nota da prova</label>
+            <input type="text" required name="nota" id="nota" pattern="^([0-6])">
+            <br>
+            <label>Nota dos Oia 1</label>
+            <input type="text" required name="notaO" id="nota1" pattern="^([0-4])">
+            <br>
+            <label>Nota dos Oia 2</label>
+            <input type="text" required name="notaO" id="nota2" pattern="^([0-4])">
+            <br>
+            <label>Nota dos Oia 3</label>
+            <input type="text" required name="notaO" id="nota3" pattern="^([0-4])">
+            <br>
+            <input type="submit" required value="Submit">
+        </form>
+        <div id="result">
+            A nota aparecerá aqui...
+        </div>
+    </body>
+    <script>
+        
+        function checkBox(form){
+            var nota1 = document.getElementById("nota1").value;
+            var nota01 = Number.parseFloat(nota1)
+            var nota2 = document.getElementById("nota2").value;
+            var nota02 = Number.parseFloat(nota2)
+            var nota3 = document.getElementById("nota3").value;
+            var nota03 = Number.parseFloat(nota3)
+            var notas = (nota01+nota02+nota03)/3
+            var notas1 = notas.toFixed(2)
+            var notaPro = document.getElementById("nota").value;
+            var notaP = Number.parseFloat(notaPro)
+            var o = (notas+notaP)/2
+            var oficial = o.toFixed(2)
+            var result = document.getElementById ('result')
+            result.innerHTML = 'A média do aluno é ' + oficial
+            alert('A média do aluno é ' + oficial)           
+        }
+
+           
+
+    </script>
+</html>
