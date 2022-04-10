@@ -27,7 +27,7 @@ ul {
 
 li {
     float: left;
-    text-align: center;
+
 
 }
 
@@ -161,7 +161,6 @@ body{
 
 .galeria{
     border: 1px solid #000;
-    display: inline-block;
     margin-bottom: 100px;
     border: 1x solid black;
 }
@@ -169,17 +168,19 @@ body{
     cursor: pointer;
     margin: 5px;
     margin-right: 0px;
-    float: left;
     opacity: 1;
-    float: left;
 }
 .galeria  p{
     margin: 5px;
     margin-right: 0px;
-    float: left;
     opacity: 1;
-    float: left;
     color: #fff;
+}
+#SPFC{
+  float: left;
+}
+#derby{
+  float: left;
 }
 .container{
     position: relative;
@@ -230,7 +231,7 @@ footer img{
 
 [class*="col-"] {
   width: 100%;
-}
+  }
 
 @media only screen and (min-width: 600px) {
   .col-s-1 {width: 8.33%;}
@@ -246,7 +247,7 @@ footer img{
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
   .col-s-13 {width: 41.7%}
-  .col-s-14 {width: 22%}
+  .col-s-14 {width: 65%}
 }
 @media only screen and (min-width: 768px) {
   .col-1 {width: 8.33%;}
