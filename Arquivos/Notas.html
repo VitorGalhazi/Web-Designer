@@ -26,7 +26,7 @@
         <h1>Cadastro de Usuário</h1>
         <form action="" method="post" onsubmit="checkBox(this)">
             <label>Nome:</label>
-            <input type="text" required min=3 name="nome" pattern="([A-ZÁ-Ú]{1})([a-z]{2,})">
+            <input type="text" required min=3 name="nome" id="nome" pattern="([A-ZÁ-Ú]{1})([a-z]{2,})">
             <br>
             <label>Número: </label>
             <input type="number" required max="30" name="number">
@@ -79,9 +79,7 @@
             <br>
             <input type="submit" required value="Submit">
         </form>
-        <div id="result">
-            A nota aparecerá aqui...
-        </div>
+        <div id=”frase”>Nota...</div>
     </body>
     <script>
         
@@ -92,15 +90,22 @@
             var nota02 = Number.parseFloat(nota2)
             var nota3 = document.getElementById("nota3").value;
             var nota03 = Number.parseFloat(nota3)
-            var notas = (nota01+nota02+nota03)/3
+            var notas = nota01+nota02+nota03
             var notas1 = notas.toFixed(2)
             var notaPro = document.getElementById("nota").value;
             var notaP = Number.parseFloat(notaPro)
             var o = (notas+notaP)/2
             var oficial = o.toFixed(2)
-            var result = document.getElementById ('result')
-            result.innerHTML = 'A média do aluno é ' + oficial
-            alert('A média do aluno é ' + oficial)           
+            var name = document.getElementById("nome").value;
+            if(oficial>=7){
+                var fraseAtual = document.getElementById("frase");
+                fraseAtual.innerHTML = "A média do aluno "+ name + " é "+ oficial + " e ele está aprovado"
+            }else{
+                var fraseAtual = document.getElementById("frase");
+                fraseAtual.innerHTML = "A média do aluno "+ name + " é "+ oficial + " e ele está de recuperação.";  
+            }
+            
+                    
         }
 
            
