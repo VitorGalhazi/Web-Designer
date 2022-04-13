@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta  charset="utf-8">
+        <style>
+        Body {
+        font-family: cursive, sans-serif;
+        width: auto;
+        height: auto;
+        background-color: coral;
+        padding: 25px;
+        font-size: 20px;
+    }    
+    
+    p { 
+        color: blue;
+    }
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    
+        </style>
+    </head>
+    <body>
+        <h1>Cadastro de Usuário</h1>
+        <form action="" method="post" onsubmit="checkBox(this)" >
+            <label>Registro do Aluno </label>
+            <input type="text" required name="rg">
+            <br>
+            <label>Nome:</label>
+            <input type="text" required min=3 name="nome" id="nome" pattern="([A-ZÁ-Ú]{1})([a-z]{2,})">
+            <br>
+            <br>
+            <label>1ºBimestre</label>
+            <label>Nota da prova</label>
+            <input type="number" required name="nota" id="nota" pattern="^([0-10])">
+            <br>
+            <label>Nota dos Oia 1</label>
+            <input type="number" required name="notaO" id="nota1" pattern="^([0-10])">
+            <br>
+            <label>Nota dos Oia 2</label>
+            <input type="number" required name="notaO" id="nota2" pattern="^([0-10])">
+            <br>
+            <label>Nota dos Oia 3</label>
+            <input type="number" required name="notaO" id="nota3" pattern="^([0-10])">
+            <br>
+            <br>
+            <label>2ºBimestre</label>
+            <label>Nota da prova</label>
+            <input type="number" required name="nota" id="nota001" pattern="^([0-10])">
+            <br>
+            <label>Nota dos Oia 1</label>
+            <input type="number" required name="notaO" id="nota11" pattern="^([0-10])">
+            <br>
+            <label>Nota dos Oia 2</label>
+            <input type="number" required name="notaO" id="nota12" pattern="^([0-10])">
+            <br>
+            <label>Nota dos Oia 3</label>
+            <input type="number" required name="notaO" id="nota13" pattern="^([0-10])">
+            <br>
+            <br>
+            <label>Recuperação</label>
+            <label>Nota da prova</label>
+            <input type="number" required name="nota" id="nota0011" pattern="^([0-10])">
+            <br>
+            <label>Nota dos Oia 1</label>
+            <input type="number" required name="notaO" id="nota111" pattern="^([0-10])">
+            <br>
+            <label>Nota dos Oia 2</label>
+            <input type="number" required name="notaO" id="nota121" pattern="^([0-10])">
+            <br>
+            <label>Nota dos Oia 3</label>
+            <input type="number" required name="notaO" id="nota131
+            " pattern="^([0-10])">
+            <br>
+            <input type="submit" required value="Submit">
+        </form>
+        <div id="frase">Nota...</div>
+    </body>
+    <script>
+        
+        function checkBox(form){
+            var nota1 = document.getElementById("nota1").value;
+            var nota01 = Number.parseFloat(nota1)
+            var nota2 = document.getElementById("nota2").value;
+            var nota02 = Number.parseFloat(nota2)
+            var nota3 = document.getElementById("nota3").value;
+            var nota03 = Number.parseFloat(nota3)
+            var notas = ((nota01+nota02+nota03)/2)*4
+            var notaPro = document.getElementById("nota").value;
+            var notaP = Number.parseFloat(notaPro)
+            var oficial = notaP*6
+            var mediaF1 = ((notas + oficial)/2)/10
+
+            alert(mediaF1)
+
+            var nota10 = document.getElementById("nota11").value;
+            var nota001 = Number.parseFloat(nota10)
+            var nota20 = document.getElementById("nota12").value;
+            var nota002 = Number.parseFloat(nota20)
+            var nota30 = document.getElementById("nota13").value;
+            var nota03 = Number.parseFloat(nota30)
+            var notas01 = ((nota01+nota02+nota03/2))*4
+            var notaProf = document.getElementById("nota001").value;
+            var notaPr = Number.parseFloat(notaProf)
+            var oficial1 = notaPr*6
+            var mediaF2 = ((nota001 + oficial1)/2)/10
+
+            alert(mediaF2)
+
+            var mediaFinal = ((mediaF1+mediaF2)/2)*10
+
+            alert(mediaFinal)
+    }
+
+    if((mediaF1+mediaF2)/2<7){
+            alert("O aluno está de recuperação, digite as notas da recuperação.")
+            var nota1 = document.getElementById("nota131").value;
+            var nota01 = Number.parseFloat(nota1)
+            var nota2 = document.getElementById("nota121").value;
+            var nota02 = Number.parseFloat(nota2)
+            var nota3 = document.getElementById("nota131").value;
+            var nota03 = Number.parseFloat(nota3)
+            var notas = ((nota01+nota02+nota03/2))*4
+            var notaPro = document.getElementById("nota0011").value;
+            var notaP = Number.parseFloat(notaPro)
+            var oficial = notaP*6
+            var mediaF1 = (notas + oficial)/10
+            alert(mediaF2)
+
+            }
+    </script>
+</html>

@@ -24,7 +24,10 @@
     </head>
     <body>
         <h1>Cadastro de Usuário</h1>
-        <form action="" method="post" onsubmit="checkBox(this)">
+        <form action="" method="post" onsubmit="return checkBox(this)">
+            <label>Registro do Aluno </label>
+            <input type="text" required name="rg">
+            <br>
             <label>Nome:</label>
             <input type="text" required min=3 name="nome" id="nome" pattern="([A-ZÁ-Ú]{1})([a-z]{2,})">
             <br>
@@ -65,50 +68,11 @@
             <option value="modulo">3ºmódulo</option>
             </select>
             <br>
-            <label>Nota da prova</label>
-            <input type="text" required name="nota" id="nota" pattern="^([0-6])">
-            <br>
-            <label>Nota dos Oia 1</label>
-            <input type="text" required name="notaO" id="nota1" pattern="^([0-4])">
-            <br>
-            <label>Nota dos Oia 2</label>
-            <input type="text" required name="notaO" id="nota2" pattern="^([0-4])">
-            <br>
-            <label>Nota dos Oia 3</label>
-            <input type="text" required name="notaO" id="nota3" pattern="^([0-4])">
-            <br>
-            <input type="submit" required value="Submit">
         </form>
         <div id="frase">Nota...</div>
     </body>
     <script>
-        
-        function checkBox(form){
-            var nota1 = document.getElementById("nota1").value;
-            var nota01 = Number.parseFloat(nota1)
-            var nota2 = document.getElementById("nota2").value;
-            var nota02 = Number.parseFloat(nota2)
-            var nota3 = document.getElementById("nota3").value;
-            var nota03 = Number.parseFloat(nota3)
-            var notas = nota01+nota02+nota03
-            var notas1 = notas.toFixed(2)
-            var notaPro = document.getElementById("nota").value;
-            var notaP = Number.parseFloat(notaPro)
-            var o = (notas1+notaP)/2
-            var oficial = o.toFixed(2)
-            var name = document.getElementById("nome").value;
-            if(oficial>=7){
-                var fraseAtual = document.getElementById("frase");
-                document.write ("A média do aluno "+ name + " é "+ oficial + " e ele está aprovado")
-            }else{
-                var fraseAtual = document.getElementById("frase");
-                document.write ("A média do aluno "+ name + " é "+ oficial + " e ele está de recuperação")
-            }
-            
-                    
-        }
-
-           
+   
 
     </script>
 </html>
